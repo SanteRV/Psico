@@ -1,0 +1,211 @@
+
+
+
+.fondo{
+    background-image: url('/assets/images/video-bg.jpg');
+}
+.centered-section {
+    position: relative; /* Posición absoluta para el div */
+    top: 25%; /* Alinear desde la mitad superior */
+    left: 25%; /* Alinear desde la mitad izquierda */
+    width: 50%; /* Ancho del 50% del ancho total */
+    background-color: white; /* Color de fondo */
+    border-radius: 30px; /* Borde redondeado */
+    border: 2px solid black; /* Borde de 2px sólido negro */
+    padding: 20px; /* Añadir un poco de espacio interno */
+    margin-top: 100px;
+ 
+  }
+.relative-position {
+    position: relative; /* Establecer posición relativa en la sección */
+  }
+.centered-section label,
+.centered-section input {
+  display: block; /* Colocar cada elemento en una línea separada */
+  margin-bottom: 10px; /* Espacio entre elementos */
+}
+.radio-btn {
+  margin-right: 25px; /* Agregar margen entre los botones de radio y las etiquetas */
+}
+/* Estilos para los botones de opciones */
+.option-btn {
+    padding: 8px 16px;
+    margin: 0 8px;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para cuando el cursor pasa por encima del botón */
+.option-btn:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Estilos para cuando el botón está seleccionado */
+.option-btn.selected {
+    background-color: #3498db;
+    color: white;
+}
+/* Buttons */
+
+.main-button a {
+    background-color: #f5a425;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    padding: 12px 20px;
+    display: inline-block;
+    outline: none;
+}
+
+a.menu-link { display: none; }
+
+@media screen and (max-width: 950px) {
+  a.menu-link {
+    float: right;
+    display: block;
+    font-size: 36px;
+    color: #fff;
+    padding-right: 30px;
+    padding-top: 15px;
+  }
+  nav[role="navigation"] {
+    clear: both;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .js nav[role="navigation"] {
+    overflow: hidden;
+    max-height: 0;
+  }
+  nav[role="navigation"].active {
+    max-height: 20em;
+    height: 20em;
+    overflow-y: scroll;
+  }
+  nav[role="navigation"] ul {
+    top: 0;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(250,250,250,0.25);
+    background-color: rgba(22,34,57,0.99);
+  }
+  nav[role="navigation"] li a {
+    display: block;
+    padding: 15px 0px;
+    border-bottom: 1px solid rgba(250,250,250,0.25);
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  nav[role="navigation"] li:hover a,
+  nav[role="navigation"] li.active a {
+      color: #f5a425;
+  }
+  
+  @media screen and (min-width: 951px) {
+    .js nav[role="navigation"] {
+      max-height: none;
+    }
+
+    nav[role="navigation"] li {
+      display: inline-block;
+      margin: 0 0.25em;
+    }
+    nav[role="navigation"] li a {
+      border: 0;
+    }
+  }
+}
+/* Header */
+
+@media screen and (max-width: 1050px) {
+    .main-header .logo {
+        padding-left: 30px!important;
+    }
+  
+    .main-menu {
+        padding-right: 30px!important;
+    }
+  
+    .main-menu li {
+        margin-left: 5px!important;
+    }
+  }
+  
+  .main-header {
+      background-color: rgba(22,34,57,0.95);
+      height: 80px;
+      position: absolute;
+      z-index: 12;
+      width: 100%;
+      top: 0;
+  }
+  
+  .main-header .logo {
+      float: left;
+      line-height: 80px;
+      padding-left: 60px;
+  }
+  
+  .main-header .logo a {
+      font-size: 36px;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: #fff;
+  }
+  .main-header .logo a em {
+      font-style: normal;
+      color: #f5a425;
+  }
+  
+  .main-menu {
+      float: right;
+      padding-right: 60px;
+  }
+  
+  .main-menu li {
+      display: inline-block;
+      line-height: 79px;
+      margin-left: 15px;
+      position: relative;
+  }
+  
+  .main-menu li:first-child {
+      margin-left: 0px;
+  }
+  
+  .main-menu li a {
+      padding: 10px 15px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+      color: #fff;
+      border: 2px solid transparent;
+      transition: all 0.5s;
+  }
+  
+  .main-menu li.has-submenu a:after {
+      content: '\f107';
+      font-family: "FontAwesome";
+      margin-left: 5px;
+  }
+  
+  .main-menu li.has-submenu ul li a:after {
+      display: none;
+  }
+  

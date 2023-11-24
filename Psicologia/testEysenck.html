@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>MINDWELL</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+<!--
+    
+
+-->
+  </head>
+
+<body class="background-image">
+
+    
+    <img src="assets/images/video-bg.jpg" alt="" style="width: 100%;height: auto; position: fixed; top: 0; left: 0; z-index: -1;">
+    <img src="assets/images/video-bg.jpg" alt="" style="width: 100%;height: auto; position: fixed; top: 410px; left: 0; z-index: -1;">
+    <img src="assets/images/video-bg.jpg" alt="" style="width: 100%;height: auto; position: fixed; top: 820px; left: 0; z-index: -1;">
+  <!--header-->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="index.html"><em>MIND</em> well</a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+
+  </header>
+
+<section class="relative-position">
+<div class="centered-section">
+        <h1 style="text-align: center;">
+          Test Eysenck
+        </h1>
+        <div>
+
+
+
+
+
+
+
+
+            <form action="codigo.php" method="POST" style="display: flex; flex-direction: column;">
+
+                <div style="display: flex; margin-bottom: 10px; margin-left: 20%;">
+                  <label for="nombre" style="display: inline-block; width: 40%;">Nombre:</label>
+                  <input type="text" id="nombre" name="nombre" style="display: inline-block;">
+                </div>
+
+                <div style="display: flex; margin-bottom: 10px; margin-left: 20%;">
+                    <label for="edad" style="display: inline-block; width:  40%;">Edad:</label>
+                    <input type="text" id="edad" name="edad" style="display: inline-block;">
+                  </div>
+
+                <div style="display: flex; margin-left: 20%;">
+                    <label for="email" style="display: inline-block; width: 40%;">Email:</label>
+                    <input type="email" id="email" name="email" style="display: inline-block;">
+                  </div>
+
+ 
+            </div>
+           
+            <div style="display: flex; margin-left: 20%;">
+                <label for="sexo" style="display: inline-block; width: 40%;">Sexo:</label>
+                <input type="radio" id="masculino" name="sexo" value="masculino">
+                <label for="masculino" class="radio-btn">M</label>
+              
+                <input type="radio" id="femenino" name="sexo" value="femenino">
+                <label for="femenino" class="radio-btn">F</label><br>
+            </div>
+            
+              
+            <div style="display: flex; flex-direction: column; ">
+                <div style="display: flex; margin-bottom: 10px; justify-content: center;">
+                    <input type="submit" value="enviar">
+                    <!-- <button  type="submit" id="enviar" style="cursor: pointer; background-color: blue; color: white; border: none; padding: 5px 10px;">
+                        Enviar
+                      </button>
+                    -->
+                   
+                  </div>
+            </div>
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <hr style="border-top: 2px solid #3498db;">
+
+        <!--                 PREGUNTAS                   -->
+
+        <div class="questions" ip="question1" style="display: flex; flex-direction: column; ">
+            <p style="text-align:left;margin-left: 10%;">1. ¿Le gusta la abundancia de excitación y bullicio a su alrededor?</p>
+            <div style="display: flex; justify-content: center; ">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+    
+        <div class="questions" ip="question2" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">2. ¿Tiene a menudo un sentimiento de intranquilidad, como si quisiera algo, pero sin saber que?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question3" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">3. ¿Tiene casi siempre una contestación lista ala mano cuando se le habla?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question4" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">4. ¿Se siente algunas veces feliz, algunas veces triste, sin una razón real?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question5" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">5. ¿Permanece usualmente retraído (a) en fiestas y reuniones?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question6" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">6. Cuando era niño(a) ¿hacia siempre inmediatamente lo que le decían, sin refunfuñar?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question7" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">7. ¿Se enfada o molesta a menudo</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question8" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">8. Cuando lo(a) meten a una pelea ¿prefiere sacar los trapitos al aire de una vez por todas, en vez de quedar callado(a) esperando que las cosas se calmen solas?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question9" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">9. ¿Es usted triste, melancólico (a)?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question10" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">10. ¿Le gusta mezclarse con la gente?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question11" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">11. ¿Ha perdido a menudo el sueño por sus preocupaciones?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question12" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">12. ¿Se pone a veces malhumorado (a)?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question13" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">13. ¿Se catalogaría a si mismo(a) como despreocupado (a) o confiado a su buena suerte?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question14" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">14. ¿Se decide a menudo demasiado tarde?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question15" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">15. ¿Le gusta trabajar solo (a)?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question16" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">16. ¿Se ha sentido a menudo apático (a) y cansado(a) sin razón?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question17" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">17. ¿Es por lo contrario animado(a) y jovial?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question18" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">18. ¿Se ríe a menudo de chistes groseros?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question19" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">19. ¿Se siente a menudo hastiado(a), harto, fastidiado?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question20" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">20. ¿Se siente incómodo(a) con vestidos que no son del diario?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question21" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">21. ¿Se distrae (vaga su mente) a menudo cuando trata de prestar atención a algo?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question22" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">22. ¿Puede expresar en palabras fácilmente lo que piensa?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question23" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">23. ¿Se abstrae (se pierde en sus pensamientos) a menudo?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question24" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">24. ¿Está completamente libre de prejuicios de cualquier tipo?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question25" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">25. ¿Le gusta las bromas?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question26" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">26. ¿Piensa a menudo en su pasado?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question27" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">27. ¿Le gusta mucho la buena comida?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question28" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">28. cuándo se fastidia ¿necesita algún(a) amigo(a) para hablar sobre ello?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question29" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">29. ¿Le molesta vender cosas o pedir dinero a la gente para alguna buena causa?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question30" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">30. ¿Alardea (se jacta) un poco a veces?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question31" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">31. ¿Es usted muy susceptible (sensible) por algunas cosas?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question32" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">32. ¿Le gusta más quedarse en casa, que ir a una fiesta aburrida?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question33" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">33. ¿Se pone a menudo tan inquieto(a) que no puede permanecer sentado(a) durante mucho rato en una silla?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question34" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">34. ¿Le gusta planear las cosas, con mucha anticipación?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question35" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">35. ¿Tiene a menudo mareos (vértigos)?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question36" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">36. ¿Contesta siempre una carta personal, tan pronto como puede, después de haberla leído?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question37" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">37. ¿Hace usted usualmente las cosas mejor resolviéndolas solo(a) que hablando a otra persona sobre ello?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions"  ip="question38" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">38. ¿Le falta frecuentemente aire, sin haber hecho un trabajo pesado?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question39"style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">39. ¿Es usted generalmente una persona tolerante, que no se molesta si las cosas no están perfectas?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+        <div class="questions" ip="question40" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">40. ¿Sufre de los nervios?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        
+        <div class="questions" ip="question41" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">41. ¿Le gustaría más planear cosas, que hacer cosas?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        <div class="questions" ip="question42" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">42. ¿Deja algunas veces para mañana. Lo que debería hacer hoy día?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        <div class="questions" ip="question43" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">43. ¿Se pone nervioso(a) en lugares tales como ascensores, trenes o túneles?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        <div class="questions" ip="question44" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">44. Cuando hace nuevos amigos(as) ¿es usted usualmente quien inicia la relación o invita a que se produzca?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        <div class="questions" ip="question45" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">45. ¿Sufre fuertes dolores de cabeza?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        <div class="questions" ip="question46" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">46. ¿Siente generalmente que las cosas se arreglaran por si solas y que terminaran bien de algún modo?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        <div class="questions" ip="question47" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">47. ¿Le cuesta trabajo coger el sueño al acostarse en las noches?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        <div class="questions" ip="question48" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">48. ¿Ha dicho alguna vez mentiras en su vida?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        <div class="questions" ip="question49" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">49. ¿Dice algunas veces lo primero que se le viene a la cabeza?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        <div class="questions" ip="question50" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">50. ¿Se preocupa durante un tiempo demasiado largo, después de una experiencia embarazosa?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        <div class="questions" ip="question51" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">51. ¿Se mantiene usualmente hérnico(a) o encerrado (a) en sí mismo(a), excepto con amigos muy íntimos?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        <div class="questions" ip="question52" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">52. ¿Se crea a menudo problemas, por hacer cosas sin pensar?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        <div class="questions" ip="question53" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">53. ¿Le gusta contar chistes y referir historias graciosas a sus amigos?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        <div class="questions" ip="question54" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">54. ¿Se le hace más fácil ganar que perder un juego?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        <div class="questions" ip="question55" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">55. ¿Se siente a menudo demasiado consciente de sí mismo(a) o poco natural cuando esta con sus superiores?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        <div class="questions" ip="question56" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">56. Cuando todas las posibilidades están contra usted, ¿piensa aun usualmente que vale la pena intentar?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+        <div class="questions" ip="question57" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center;">57. ¿Siente “sensaciones” en el abdomen, antes de un hecho importante?</p>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="responder('si')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">Sí</button>
+                <button onclick="responder('no')" class="option-btn" style="width: 100px; text-align: center; margin: 0 10px;">No</button>
+            </div>
+        </div>
+
+
+        <button onclick="verResultados()" style="margin-top: 20px;">Ver Resultados</button>
+        <p id="resultado" style="text-align: center; font-weight: bold;"></p>
+
+
+    </div>
+    
+</section>
+
+ 
+  <!-- Scripts -->
+  <script>
+    // Contador para la suma de "sí"
+    let sumaSi = 0;
+
+    // Función para capturar respuestas
+    function responder(respuesta, numeroPregunta) {
+        // Asignar valor a la respuesta: 'si' = 1, 'no' = 0
+        let valorRespuesta = respuesta === 'si' ? 1 : 0;
+
+        // Sumar o restar el valor de acuerdo a la respuesta
+        if (respuesta === 'si') {
+            sumaSi += 1;
+        } else {
+            sumaSi += 0;
+        }
+
+        // Puedes guardar los valores o hacer algo más con ellos aquí si es necesario
+
+        console.log(`Pregunta ${numeroPregunta}: ${respuesta} (${valorRespuesta})`);
+
+      // Cambiar el estilo del botón seleccionado
+        const buttons = document.querySelectorAll(`#question${numeroPregunta} .option-btn`);
+        buttons.forEach(button => button.classList.remove('selected')); // Reiniciar estilos
+        event.target.classList.add('selected'); // Aplicar estilo al botón seleccionado
+        
+
+    }
+
+    // Función para mostrar resultados al hacer clic en el botón correspondiente
+    function verResultados() {
+        // Mostrar la suma de los "sí"
+        document.getElementById('resultado').innerText = `Total "Sí": ${sumaSi}`;
+        
+    }
+</script>
+
+  <script>
+    function validarInformacion() {
+        var nombre = document.getElementById('nombre').value;
+        var edad = document.getElementById('edad').value;
+        var email = document.getElementById('email').value;
+        var masculino = document.getElementById('masculino').checked;
+        var femenino = document.getElementById('femenino').checked;
+
+        // Verificar que los campos de información personal estén completos
+        if (nombre === '' || edad === '' || email === '' || (!masculino && !femenino)) {
+            alert('Por favor, complete todos los campos de información personal antes de continuar con el test.');
+            return false; // Evitar que se envíe el formulario
+        }
+        return true; // Permitir el envío del formulario
+    }
+
+    document.querySelector('form').addEventListener('submit', function(event) {
+        if (!validarInformacion()) {
+            event.preventDefault(); // Evitar que se envíe el formulario si la validación falla
+        }
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Obtener el formulario y escuchar el evento submit
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío predeterminado del formulario
+
+            // Hacer la solicitud AJAX para enviar los datos del formulario
+            var formData = new FormData(this);
+            var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function() {
+                if (this.readyState === 4) {
+                    if (this.status === 200) {
+                        // Manejar la respuesta del servidor
+                        var response = this.responseText;
+                        var messageElement = document.createElement('p');
+                        messageElement.textContent = response; // Esto debería mostrar el mensaje devuelto por el servidor
+                        document.body.appendChild(messageElement);
+                    } else {
+                        console.error('Error en la solicitud');
+                    }
+                }
+            };
+
+            xhr.open('POST', 'codigo.php', true);
+            xhr.send(formData);
+        });
+    });
+</script>
+
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+          if($(e.target).hasClass('external')) {
+            return;
+          }
+          e.preventDefault();
+          $('#menu').removeClass('active');
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+</html>
